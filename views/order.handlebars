@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      table{
+        margin-bottom: 30px;
+      }
+      tr{
+        width: 300px;
+      }
+     td{
+     margin: 25px;
+       width: 300px;
+     }
+     .total{
+       margin-bottom: 50px;
+     }
+    </style>
+
+  </head>
+  <body>
+    <h4>Votre commande {{text.orderNumber}} à été accepter: </h4>
+
+    <div>Client: {{text.userName}}</div>
+    <table>
+      {{#each text.products}}
+        <tr>
+          <td>- {{this.title}} </td>
+          <td>{{this.quantity}}</td>
+        </tr>
+      {{/each}}
+    </table>
+
+    <div class="total">total: {{text.amount}} €</div>
+
+    <div>adress</div>
+
+    <div>{{text.address.line1}}</div>
+    <div>{{text.address.line2}}</div>
+    <div>{{text.address.postal_code}}</div>
+    <div>{{text.address.city}}</div>
+
+   
+
+
+    <div>Merci pour votre commande, nous la préparons et vous l'expedirons au plus vite </div>
+
+	
+</body>
+  </body>
+</html>
